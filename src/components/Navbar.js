@@ -1,55 +1,54 @@
 import React from 'react';
-import { Container, Navbar, Nav, ButtonGroup, DropdownButton, Dropdown,  Button } from 'react-bootstrap';
+import {
+  Container,
+  Navbar,
+  Nav,
+  ButtonGroup,
+  DropdownButton,
+  Dropdown,
+  Button,
+} from 'react-bootstrap';
 import './Navbar.scss';
 import logo from '../assets/logo.svg';
 
 const Navigation = () => (
+  <Navbar variant="dark" expand="lg">
+    <Container>
+      <Navbar.Brand href="#home">
+        <img
+          src={logo}
+          height="30"
+          className="d-inline-block align-top"
+          alt="Magbank logo"
+        />
+      </Navbar.Brand>
 
-    <Navbar variant="dark" expand="lg">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <Container>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="#cartao">Cartão</Nav.Link>
+          <Nav.Link href="#quemsomos">Quem Somos</Nav.Link>
+          <Nav.Link href="#faq">Faq</Nav.Link>
+          <Nav.Link href="#link">Link</Nav.Link>
+        </Nav>
 
-            <Navbar.Brand href="#home">
-                <img
-                    src={logo}
-                    height="30"
-                    className="d-inline-block align-top"
-                    alt="Magbank logo"
-                />
-            </Navbar.Brand>
+        <ButtonGroup aria-label="Basic example">
+          <DropdownButton
+            as={ButtonGroup}
+            title="Acessar minha conta"
+            id="bg-nested-dropdown"
+            variant="outline-light"
+          >
+            <Dropdown.Item eventKey="1">Abrir minha conta PF</Dropdown.Item>
+            <Dropdown.Item eventKey="2">Abrir minha conta PJ</Dropdown.Item>
+          </DropdownButton>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            
-            <Navbar.Collapse id="basic-navbar-nav">
-
-                <Nav className="mr-auto">
-
-                    <Nav.Link href="#cartao">Cartão</Nav.Link>
-                    <Nav.Link href="#quemsomos">Quem Somos</Nav.Link>
-                    <Nav.Link href="#faq">Faq</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-
-                </Nav>
-
-                <ButtonGroup aria-label="Basic example">
-                    
-                    <DropdownButton as={ButtonGroup} title="Acessar minha conta" id="bg-nested-dropdown" variant="outline-light">
-
-                        <Dropdown.Item eventKey="1">Abrir minha conta PF</Dropdown.Item>
-                        <Dropdown.Item eventKey="2">Abrir minha conta PJ</Dropdown.Item>
-
-                    </DropdownButton>
-                    
-                    <Button variant="outline-light">abra sua conta</Button>
-
-                </ButtonGroup>
-
-            </Navbar.Collapse>
-
-        </Container>
-
-    </Navbar>
-
+          <Button variant="outline-light">abra sua conta</Button>
+        </ButtonGroup>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
 );
 
 export default Navigation;
