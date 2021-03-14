@@ -11,7 +11,7 @@ import {
 import './Navbar.scss';
 import logo from '../assets/logo.svg';
 
-const Navigation = () => (
+const Navigation = ({ handleCreateAcc }) => (
   <Navbar variant="dark" expand="lg">
     <Container>
       <Navbar.Brand href="#home">
@@ -40,11 +40,13 @@ const Navigation = () => (
             id="bg-nested-dropdown"
             variant="outline-light"
           >
-            <Dropdown.Item eventKey="1">Abrir minha conta PF</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Abrir minha conta PJ</Dropdown.Item>
+            <Dropdown.Item eventKey="1">Pessoa Físca</Dropdown.Item>
+            <Dropdown.Item eventKey="2">Pessao Jurídica</Dropdown.Item>
           </DropdownButton>
 
-          <Button variant="outline-light">abra sua conta</Button>
+          <Button variant="outline-light" onClick={handleCreateAcc}>
+            abra sua conta
+          </Button>
         </ButtonGroup>
       </Navbar.Collapse>
     </Container>
