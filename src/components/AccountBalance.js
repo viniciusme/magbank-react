@@ -5,7 +5,7 @@ const AccountBalance = ({ data }) => {
   const { latestBalance, futureBalance } = data;
   return (
     <>
-      <Col xs={12} lg={3} className="mt-lg-5 pt-lg-4">
+      <Col xs={12} lg={3} className="mt-lg-5 pt-lg-5">
         <h3 className="my-5">Conta Corrente</h3>
         <h6>
           <small>
@@ -20,7 +20,7 @@ const AccountBalance = ({ data }) => {
         <p className="mb-4">R$ 5.000,00</p>
         <Button variant="secondary">Ver extrato</Button>
       </Col>
-      <Col xs={12} lg={5} className="mt-lg-5 pt-lg-5">
+      <Col xs={12} lg={5} className="mt-lg-5">
         <Tabs className="mt-5 pt-lg-5" defaultActiveKey="latest">
           <Tab eventKey="latest" title="Últimos Lançamentos">
             <Table striped borderless hover>
